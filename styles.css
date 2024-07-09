@@ -1,0 +1,566 @@
+
+/*Navigation Styles*/
+  nav{
+    background-color: #3f8fe5;
+  }
+  .logo{
+    width: 12%;
+    display: inline-block;
+    padding: 20px;
+  }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    float: left;
+  }
+  li a{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px;
+    color:#fff;
+    background-color: #3f8fe5;
+  }
+
+  li a.active{
+    color: #183657;
+  }
+
+  li a:hover{
+    background-color: #2e6aaa;
+  }
+
+/*Mobile friendly Nav*/
+  .fullnav ul{
+    display: inline-block;
+    width: 76%;
+  }
+
+  .mobilenav ul{
+    display: block;
+    width: 100%;
+  }
+
+  .fullnav li a{
+    font-size: 15pt;
+    width: fit-content;
+    min-width: 130px;
+  }
+
+  .mobilenav{
+    width: 100%;
+  }
+
+/*Dropdown*/
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .dropdown:hover .dropdown-content{
+    display: block;
+  } 
+
+/*Body Content*/
+
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    color: #071d64; 
+    line-height: 1.7;
+  }
+
+  h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25pt;
+    color: #3f8fe5;
+  }
+
+  body, header, footer{
+    overflow-x: hidden;
+    margin: 0;
+  }  
+  
+  .container{
+      padding-top: 40px; 
+      background-color: #fff; 
+      display: flex;
+  }
+
+/*Home Page Slideshow in place of cover*/
+  .slideshow-container{
+    width:100%;
+    position: relative;
+    z-index: 1;
+    background-color: #3f8fe5;
+  }
+
+  .slide{
+    display: none;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color:#fff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .caption{
+    color: #071d64;
+    position: absolute;
+    top: 0px;
+    width: 45%;
+    height: 99.5%;
+    text-align: left;
+    float: left;
+    background-color: #f2f2f2cb;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .left{
+    left: 0px;
+  }
+
+  .right{
+    right: 0px;
+  }
+
+  .caption button{
+    border: none;
+    display: block;
+    background-color: #3f8fe5;
+    color:#fff;
+    padding: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    left: 70px;
+  }
+  
+ .caption p{
+     padding-left: 70px;
+     padding-right: 70px;
+     color: #00244D;
+ }
+  
+  .caption h2{
+    line-height: 1.1;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: .1em;
+    color: #00244D;
+  }
+  
+  .caption a{
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .dot.active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  
+/*Page cover photos and captions*/
+  .backgroundLayer {
+    display: inline-block; 
+    box-sizing:border-box; 
+    position: sticky;
+    top: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    background-size:100%;
+  }
+
+		
+  .pageTitle {
+    float: left;
+    top: 100px;
+    left: 40px;
+    position: absolute;			
+    box-sizing:border-box;
+    background-color: #2e6aaa;;
+    box-shadow: 5px 5px 5px #383838;
+  }
+
+  h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000033;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+		
+  .aboutBlurb {
+    float: left;
+    position: absolute;
+    box-sizing:border-box;
+    background-color: #FFF;
+    padding: 25px;
+    font-family:"Arial", "sans-serif";
+    text-align: justify;
+    color: #000033;
+      box-shadow: 5px 5px 5px #383838;
+  }
+
+  .aboutBlurb p {
+    font-family: "Arial", "sans-serif"; /*change*/
+    color: #000;
+  }
+
+/*Media Queries*/
+  /*Super Small screen sizes*/
+  @media screen and (max-width: 649px){
+    .mobilenav{
+      display: block;
+    }
+
+    .fullnav{
+      display: none;
+    }
+
+    .caption{
+      width:100%;
+    }
+
+    .caption p{
+      margin-top: .1em;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .caption h2{
+      font-size: 50px;
+      margin-bottom: .1em;
+    }
+
+    .caption button{
+      font-size: 12px;
+    }
+
+    .slide{
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .slide img{
+      height: 600px;
+      width:auto;
+      overflow-x: hidden;
+    }
+
+    .aboutBlurb
+    {
+      font-size: 12pt;
+      width: 60%;
+      top: 215px;
+	    left: 30px;
+    }
+
+    .pageTitle{
+      font-size: 15pt;
+    }
+
+    .mobileFooter{
+      display: block;
+    }
+
+    .fullFooter{
+      display: none;
+    }
+
+    .container{
+      padding-left: 10px; 
+      padding-right: 10px;
+    } 
+  }
+  /*Small screen sizes*/
+  @media screen and (max-width: 885px) and (min-width: 650px){
+    .mobilenav{
+      display: block;
+    }
+
+    .slide img{
+      width: 100%;
+    }
+
+    .fullnav{
+      display: none;
+    }
+
+    .caption{
+      width:100%;
+    }
+
+    .caption p{
+      margin-top: .1em;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .caption h2{
+      font-size: 50px;
+      margin-bottom: .1em;
+    }
+
+    .caption button{
+      font-size: 12px;
+    }
+
+    .aboutBlurb
+    {
+      font-size: 12pt;
+      width: 500px;
+      top: 205px;
+	    left: 80px;
+    }
+
+    .pageTitle{
+      font-size: 16pt;
+    }
+
+    .mobileFooter{
+      display: block;
+    }
+
+    .fullFooter{
+      display: none;
+    }
+
+    .container{
+      padding-left: 10px; 
+      padding-right: 10px; 
+  }
+  }
+  /*mid-sized screens*/
+  @media screen and (min-width: 886px) and (max-width: 1170px) {
+    .mobilenav{
+      display: none;
+    }
+
+    .fullnav{
+      display: block;
+    }
+
+    .slide img{
+      width: 100%;
+    }
+
+    .caption p{
+      font-size: 15px;
+      margin-top: .3em;
+      line-height: 1.8;
+    }
+
+    .caption h2{
+      font-size: 40px;
+      margin-bottom: .3em;
+    }
+
+    .caption button{
+      font-size: 12px;
+    }
+
+    .aboutBlurb
+    {
+      font-size: 15pt;
+      width: 776px;
+      top: 285px;
+    	left: 80px;
+    }
+
+    .pageTitle{
+      font-size: 24pt;
+    }
+
+    .mobileFooter{
+      display: none;
+    }
+
+    .fullFooter{
+      display: inline-block;
+    }
+
+    .container{
+      padding-left: 50px; 
+      padding-right: 50px; 
+  }
+  }
+
+  /*Upper-mid screen sizes*/
+  @media screen and (min-width: 1171px) and (max-width: 1500px){
+    .mobilenav{
+      display: none;
+    }
+    
+    .fullnav{
+      display: block;
+    }
+
+    .slide img{
+      width: 100%;
+    }
+
+    .caption p{
+      font-size: 20px;
+      margin-top: .5em;
+      line-height: 1.8;
+    }
+
+
+    .caption h2{
+      font-size: 70px;
+      margin-bottom: .5em;
+    }
+
+    .caption button{
+      font-size: 14px;
+    }
+
+    .aboutBlurb
+    {
+      font-size: 16pt;
+      width: 845px;
+      top: 285px;
+	    left: 80px;
+    }
+
+    .pageTitle{
+      font-size: 26pt;
+    }
+
+    .mobileFooter{
+      display: none;
+    }
+
+    .fullFooter{
+      display: inline-block;
+    }
+
+    .container{
+      padding-left: 100px; 
+      padding-right: 100px; 
+  }
+  }
+
+  /*Large screen sizes*/
+  @media screen and (min-width: 1501px){
+    .mobilenav{
+      display: none;
+    }
+
+    .fullnav{
+      display: block;
+    }
+
+    .slide img{
+      width: 100%;
+    }
+
+    .caption h2{
+      font-size: 80px;
+      margin-bottom: .2em;
+    }
+
+    .caption p{
+      font-size: 24px;
+      margin-top: 2em;
+      line-height: 2;
+    }
+    
+    .caption button{
+      font-size: 18px;
+    }
+
+    .aboutBlurb{
+      font-size: 16pt;
+      width: 1020px;
+      top: 285px;
+	    left: 80px;
+    }
+
+    .pageTitle{
+      font-size: 26pt;
+    }
+
+    .mobileFooter{
+      display: none;
+    }
+
+    .fullFooter{
+      display: inline-block;
+    }
+
+    .container{
+      padding-left: 100px; 
+      padding-right: 100px; 
+  }
+  }
+
+/*Footer Styles*/
+
+  footer{
+    background-color: #3f8fe5;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100px;
+    padding-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer ul{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+
+
+
+.copyright{
+  text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 12px;
+    color:#fff;
+}
+
+footer li a{
+  font-size: 14px;
+}
